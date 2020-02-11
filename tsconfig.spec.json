@@ -1,0 +1,22 @@
+{
+    "include": ["./src/**/*.spec.ts"],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "strict": false,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "target": "ES2015",
+      "lib": [
+        "es6",
+        "dom",
+        "es2017"
+      ],
+      "rootDir": "src",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "outDir": "tsc",
+      "skipLibCheck": true
+    },
+    "exclude": ["node_modules"]
+  }

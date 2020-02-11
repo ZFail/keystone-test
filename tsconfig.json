@@ -1,0 +1,23 @@
+{
+ "include": ["./src/**/*"],
+//   "files": ["./src/todo.ts"],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "strict": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "target": "ES2015",
+      "lib": [
+        "es6",
+        "dom",
+        "es2017"
+      ],
+      "rootDir": "src",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "outDir": "tsc",
+      "skipLibCheck": true
+    },
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
