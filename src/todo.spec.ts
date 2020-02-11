@@ -29,20 +29,13 @@ test('select todo', () => {
     store.selectTodoById('0')
     expect(store.selectedTodo).toBeTruthy()
     expect(store.selectedRef).toBeTruthy()
-    // if (store.selectedRef) {
-        expect(store.selectedRef.isValid).toBeTruthy()
-    // }
+    expect(store.selectedRef.isValid).toBeTruthy()
     store.clear()
     expect(store.selectedRef).toBeTruthy()
-    // if (store.selectedRef) {
-        expect(store.selectedRef.isValid).not.toBeTruthy()
-    // }
-    store.addTodo({text: 'asd', id: '0'})
-    // store.selectTodo(store.todos[0])
+    expect(store.selectedRef.isValid).not.toBeTruthy()
+    store.addTodo({text: 'asd2', id: '0'})
     expect(store.selectedRef).toBeTruthy()
-    // if (store.selectedRef) {
-        expect(store.selectedRef.isValid).toBeTruthy()
-        expect(store.selectedRef.current.text).toBe('asd');
-        expect(store.selectedRef.current.done).toBe(false);
-    // }
+    expect(store.selectedRef.isValid).toBeTruthy()
+    expect(store.selectedRef.current.text).toBe('asd2');
+    expect(store.selectedRef.current.done).toBe(false);
 })
